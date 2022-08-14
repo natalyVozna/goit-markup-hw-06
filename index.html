@@ -53,9 +53,7 @@
             Ефективні рішення<br />
             для вашого бізнесу
           </h1>
-          <button data-modal-open class="button primary shadow" type="button">
-            Замовити послугу
-          </button>
+          <button data-modal-open class="button primary" type="button">Замовити послугу</button>
         </div>
       </section>
 
@@ -340,6 +338,7 @@
         </div>
       </section>
 
+      <!-- Modal window -->
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
           <button data-modal-close class="close-btn btn-reset" type="button">
@@ -347,6 +346,47 @@
               <use href="./images/icons.svg#icon-close"></use>
             </svg>
           </button>
+          <section class="section-form">
+            <h1 class="title">Залиште свої дані, ми вам передзвонимо</h1>
+            <form class="form" autocomplete="off">
+              <div role="group">
+                <p class="form-field">
+                  <label for="name" class="form-label">Ім'я</label>
+                  <input type="text" class="form-input" name="name" id="name" />
+                  <svg class="form-icon">
+                    <use href="./images/icons.svg#icon-close"></use>
+                  </svg>
+                </p>
+                <p class="form-field">
+                  <label for="phone" class="form-label">Телефон</label>
+                  <input type="tel" class="form-input" name="phone" id="phone" />
+                  <svg class="form-icon">
+                    <use href="./images/icons.svg#icon-close"></use>
+                  </svg>
+                </p>
+                <p class="form-field">
+                  <label for="emeil" class="form-label">Пошта</label>
+                  <input type="email" class="form-input" name="emeil" id="emeil" />
+                  <svg class="form-icon">
+                    <use href="./images/icons.svg#icon-close"></use>
+                  </svg>
+                </p>
+              </div>
+              <p class="form-field">
+                <label for="emeil" class="form-label">Коментар</label>
+                <textarea class="comment" placeholder="Введіть текст"></textarea>
+              </p>
+              <p class="form-field field-checkbox">
+                <input type="checkbox" name="policy" value="policy" class="policy" id="policy" />
+                <label for="policy" class="form-label">
+                  Погоджуюся з розсилкою та приймаю
+                  <a href="/" class="policy-link">Умови договору</a></label
+                >
+              </p>
+
+              <button type="submit" class="btn-reset button primary btn-center">Відправити</button>
+            </form>
+          </section>
         </div>
       </div>
     </main>
