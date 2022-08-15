@@ -242,23 +242,18 @@ p {
 }
 
 .button {
-  padding: 10px 32px;
   border: none;
   border-radius: 4px;
 
   font-size: 16px;
-  align-items: center;
   letter-spacing: 0.06em;
   cursor: pointer;
 
   transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 
-/* .button.shadow {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-} */
-
 .button.primary {
+  padding: 10px 32px;
   background-color: var(--accent-color);
   color: var(--white-color);
   font-weight: 700;
@@ -274,6 +269,7 @@ p {
 }
 
 .button.secondary {
+  padding: 6px 22px;
   background-color: var(--secondary-bg-color);
   color: var(--title-text-color);
   font-weight: 500;
