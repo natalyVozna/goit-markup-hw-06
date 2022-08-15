@@ -457,6 +457,7 @@ p {
 .social-links {
   display: flex;
   align-items: center;
+  margin-right: 93px;
 }
 
 .social-links .item + .item {
@@ -581,8 +582,7 @@ p {
   color: var(--accent-color);
 }
 
-/* Footer social */
-.col-social .title-social {
+.title-footer {
   margin-bottom: 20px;
   padding-top: 12px;
 
@@ -592,6 +592,61 @@ p {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+/* Form footer */
+
+.col-mailing {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+}
+
+.input-footer {
+  cursor: pointer;
+  margin: 0;
+  padding: 15px 16px 15px 16px;
+  height: 50px;
+  width: calc(100% - 212px);
+  margin-right: 12px;
+
+  background-color: transparent;
+  font: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  transition: border 250ms var(--timing-function);
+}
+
+.input-footer:hover,
+.input-footer:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.input-footer::placeholder {
+  color: rgba(#fff, 0.6);
+}
+
+.button.footer-btn {
+  padding: 0 28px;
+  height: 50px;
+  display: flex;
+
+  line-height: 1.87;
+}
+
+.icon-send {
+  margin-left: 12px;
+  width: 24px;
+  height: 24px;
+  fill: var(--white-color);
 }
 
 /* PORTFOLIO */
@@ -814,6 +869,22 @@ p {
   color: var(--primary-text-color);
 }
 
+.form-label.policy {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.policy-link {
+  color: var(--accent-color);
+  transition: text-decoration 250ms var(--timing-function);
+}
+
+.policy-link:hover {
+  text-decoration: none;
+}
+
 .form-input {
   cursor: pointer;
   margin: 0;
@@ -838,6 +909,7 @@ p {
   left: 15px;
   width: 12px;
   height: 12px;
+  /* background-color: var(--accent-color); */
 
   fill: var(--title-text-color);
 
@@ -876,4 +948,12 @@ p {
 
 .field-checkbox {
   flex-direction: row;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.send-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
