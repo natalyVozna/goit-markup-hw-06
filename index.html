@@ -379,11 +379,12 @@
                 <textarea class="comment" placeholder="Введіть текст"></textarea>
               </p>
               <p class="form-field field-checkbox">
-                <input type="checkbox" name="policy" value="policy" class="policy" id="policy" />
-                <label for="policy" class="form-label policy">
+                <label class="form-label policy">
+                  <input type="checkbox" name="policy" value="policy" class="checkbox" />
+                  <span class="checkbox-icon"></span>
                   Погоджуюся з розсилкою та приймаю
-                  <a href="/" class="policy-link">Умови договору</a></label
-                >
+                  <a href="/" class="policy-link">Умови договору</a>
+                </label>
               </p>
 
               <button type="submit" class="btn-reset button primary send-btn">Відправити</button>
@@ -447,15 +448,17 @@
           </ul>
         </div>
         <div class="col-mailing">
-          <h2 class="title-footer">Підпишіться на розсилку</h2>
           <form class="form-footer">
-            <input
-              type="text"
-              class="input-footer"
-              name="meil-footer"
-              id="meil-footer"
-              placeholder="E-mail"
-            />
+            <label class="footer-field">
+              <span class="title-footer">Підпишіться на розсилку</span>
+              <input
+                type="text"
+                class="input-footer"
+                name="meil-footer"
+                id="meil-footer"
+                placeholder="E-mail"
+              />
+            </label>
 
             <button type="submit" class="btn-reset button primary footer-btn">
               Підписатися

@@ -28,7 +28,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-/* Утилиты */
+/*----------- Утилиты ------------*/
 .list {
   padding: 0;
   margin: 0;
@@ -62,7 +62,20 @@ p {
   cursor: pointer;
 }
 
-/* Header */
+. visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* ------------- Header -----------*/
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -100,7 +113,7 @@ p {
   color: var(--white-color);
 }
 
-/* Site nav */
+/*------------ Site nav ------------*/
 .site-nav {
   display: flex;
   margin-left: 93px;
@@ -161,7 +174,7 @@ p {
   transition: transform 250ms var(--timing-function);
 }
 
-/* Contacts header */
+/*---------------- Contacts header--------------------- */
 .contacts {
   display: flex;
 }
@@ -206,7 +219,7 @@ p {
   height: 12px;
 }
 
-/* Main */
+/*--------------- Main -----------*/
 .section {
   padding: 94px 0;
 }
@@ -242,6 +255,7 @@ p {
 }
 
 .button {
+  font-family: inherit;
   border: none;
   border-radius: 4px;
 
@@ -304,7 +318,7 @@ p {
   letter-spacing: 0.03em;
 }
 
-/* Works */
+/*------------ Works -----------------*/
 
 .works {
   display: flex;
@@ -341,7 +355,7 @@ p {
   color: var(--white-color);
 }
 
-/* Advantages */
+/*----------------- Advantages--------------- */
 .advantages {
   display: flex;
   /* flex-wrap: wrap; */
@@ -403,7 +417,7 @@ p {
   letter-spacing: 0.03em;
 }
 
-/* Team */
+/*-------------- Team ------------- */
 .team {
   display: flex;
 }
@@ -497,7 +511,7 @@ p {
   fill: currentColor;
 }
 
-/* Clients */
+/* -------------- Clients ------------------ */
 .clients {
   display: flex;
 }
@@ -535,7 +549,7 @@ p {
   fill: currentColor;
 }
 
-/* Footer */
+/* ------------ Footer ------------*/
 .footer {
   background: #2f303a;
   padding: 60px 0;
@@ -552,6 +566,7 @@ p {
 .contacts-footer {
   display: flex;
   flex-direction: column;
+  width: 231px;
 }
 
 .contacts-footer .item:not(:last-child) {
@@ -590,7 +605,7 @@ p {
   text-transform: uppercase;
 }
 
-/* Form footer */
+/*--------------- Form footer --------------- */
 
 .col-mailing {
   display: flex;
@@ -600,8 +615,7 @@ p {
 
 .form-footer {
   display: flex;
-  align-items: center;
-  /* flex-direction: column; */
+  align-items: flex-end;
 }
 
 .input-footer {
@@ -609,7 +623,7 @@ p {
   margin: 0;
   padding: 15px 16px 15px 16px;
   height: 50px;
-  width: calc(100% - 212px);
+  width: 100%;
   margin-right: 12px;
 
   background-color: transparent;
@@ -621,7 +635,7 @@ p {
   transition: border 250ms var(--timing-function);
 }
 
-.input-footer:hover,
+/* .input-footer:hover, */
 .input-footer:focus {
   border: 1px solid var(--accent-color);
 }
@@ -630,10 +644,20 @@ p {
   color: rgba(#fff, 0.6);
 }
 
+.footer-field {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 212px);
+  margin-right: 12px;
+}
+
 .button.footer-btn {
   padding: 0 28px;
   height: 50px;
+  width: 200px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   line-height: 1.87;
 }
@@ -645,7 +669,7 @@ p {
   fill: var(--white-color);
 }
 
-/* PORTFOLIO */
+/*---------------- PORTFOLIO-------------------- */
 .filter-tabs {
   display: flex;
   justify-content: center;
@@ -764,7 +788,7 @@ p {
   line-height: 1.87;
 }
 
-/* Modal window */
+/*---------------- Modal window ---------------*/
 .backdrop {
   position: fixed;
   top: 0;
@@ -852,10 +876,6 @@ p {
   margin-bottom: 10px;
 }
 
-/* .form-field:not(:last-child) {
-  margin-bottom: 10px;
-} */
-
 .form-label {
   margin-bottom: 4px;
 
@@ -866,14 +886,42 @@ p {
 }
 
 .form-label.policy {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
 
+.checkbox {
+  --webkit-appearance: none;
+  --moz-appearance: none;
+  appearance: none;
+
+  position: absolute;
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  background-image: url('../images/icon-check.svg');
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accent-color);
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  margin-right: 9px;
+}
+
 .policy-link {
   color: var(--accent-color);
+
   transition: text-decoration 250ms var(--timing-function);
 }
 
@@ -894,7 +942,7 @@ p {
   transition: border 250ms var(--timing-function);
 }
 
-.form-input:hover,
+/* .form-input:hover, */
 .form-input:focus {
   border: 1px solid var(--accent-color);
 }
@@ -903,8 +951,8 @@ p {
   position: absolute;
   bottom: 20px;
   left: 15px;
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
   /* background-color: var(--accent-color); */
 
   fill: var(--title-text-color);
@@ -913,7 +961,7 @@ p {
   transition: fill 250ms var(--timing-function);
 }
 
-.form-input:hover + .form-icon,
+/* .form-input:hover + .form-icon, */
 .form-input:focus + .form-icon {
   fill: var(--accent-color);
 }
@@ -930,7 +978,7 @@ p {
   transition: border 250ms var(--timing-function);
 }
 
-.comment:hover,
+/* .comment:hover, */
 .comment:focus {
   border: 1px solid var(--accent-color);
 }
