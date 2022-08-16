@@ -375,14 +375,19 @@
                 </p>
               </div>
               <p class="form-field">
-                <label for="emeil" class="form-label">Коментар</label>
-                <textarea class="comment" placeholder="Введіть текст"></textarea>
+                <label for="comment" class="form-label">Коментар</label>
+                <textarea
+                  class="comment"
+                  name="comment"
+                  placeholder="Введіть текст"
+                  id="comment"
+                ></textarea>
               </p>
               <p class="form-field field-checkbox">
                 <label class="form-label policy">
                   <input type="checkbox" name="policy" value="policy" class="checkbox" />
                   <span class="checkbox-icon"></span>
-                  Погоджуюся з розсилкою та приймаю
+                  Погоджуюся з розсилкою та приймаю&nbsp;
                   <a href="/" class="policy-link">Умови договору</a>
                 </label>
               </p>
@@ -451,13 +456,7 @@
           <form class="form-footer">
             <label class="footer-field">
               <span class="title-footer">Підпишіться на розсилку</span>
-              <input
-                type="text"
-                class="input-footer"
-                name="meil-footer"
-                id="meil-footer"
-                placeholder="E-mail"
-              />
+              <input type="email" class="input-footer" name="meil-footer" placeholder="E-mail" />
             </label>
 
             <button type="submit" class="btn-reset button primary footer-btn">
