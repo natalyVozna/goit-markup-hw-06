@@ -44,6 +44,13 @@ body {
   /* outline: 2px solid tomato; */
 }
 
+:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
 h1,
 h2,
 h3,
@@ -625,6 +632,7 @@ p {
   height: 50px;
   width: 100%;
   margin-right: 12px;
+  color: var(--white-color);
 
   background-color: transparent;
   font: inherit;
@@ -887,6 +895,8 @@ p {
 
 .form-label.policy {
   display: flex;
+  margin-bottom: 0;
+
   align-items: center;
   font-size: 14px;
   line-height: 1.71;
