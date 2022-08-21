@@ -1017,6 +1017,7 @@ p {
 
 .field-checkbox {
   flex-direction: row;
+  justify-content: center;
   margin-top: 20px;
   margin-bottom: 30px;
 }
